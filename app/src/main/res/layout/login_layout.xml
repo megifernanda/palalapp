@@ -3,7 +3,7 @@
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainbg"
+    android:background="#795548"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
@@ -42,12 +42,13 @@
         android:orientation="vertical">
 
         <RelativeLayout
+            android:id="@+id/rl_login"
             android:visibility="gone"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:background="#ffff"
+            android:background="@drawable/bg_shadow"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -55,8 +56,8 @@
                 android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/bg_edittext"
                 android:drawablePadding="15dp"
@@ -69,8 +70,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/et_email"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/bg_edittext"
                 android:drawablePadding="15dp"
@@ -83,8 +84,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@+id/et_password"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
                 android:layout_marginTop="15dp"
                 android:padding="5dp"
                 fancy:fb_defaultColor="#42A5F5"
@@ -103,6 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn_login"
                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
                 android:gravity="center"
                 android:text="REGISTER"
                 android:textColor="#4CAF50"
@@ -121,7 +123,7 @@
 
 
             <mehdi.sakout.fancybuttons.FancyButton
-                android:id="@+id/btn_download"
+                android:id="@+id/btn_visit"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
