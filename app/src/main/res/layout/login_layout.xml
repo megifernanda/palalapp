@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_logo"
+        android:gravity="center"
+        android:text="Info Wisata Sumatera Barat"
+        android:textColor="#fff" />
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_download"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="10dp"
+        fancy:fb_defaultColor="#fff"
+        fancy:fb_focusColor="#8cc9f8"
+        fancy:fb_fontIconSize="25sp"
+        fancy:fb_iconPosition="left"
+        fancy:fb_radius="2dp"
+        fancy:fb_text="VISIT"
+        fancy:fb_textColor="#000"></mehdi.sakout.fancybuttons.FancyButton>
+
+
+</RelativeLayout>
