@@ -1,31 +1,42 @@
 package com.project.menda.wisatasumbar;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 import mehdi.sakout.fancybuttons.FancyButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    RelativeLayout layout;
-    FancyButton btn_visit;
+    private RelativeLayout layout;
+    private FancyButton btn_visit;
+    private TextView tv_register;
+    private EditText et_nama;
+    private EditText et_email;
+    private EditText et_password;
 
-    Animation slideUp;
-    Animation slideDown;
+    private Animation slideUp;
+    private Animation slideDown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.login_layout);
 
         layout = (RelativeLayout) findViewById(R.id.rl_login);
         btn_visit = (FancyButton) findViewById(R.id.btn_visit);
+        tv_register = (TextView) findViewById(R.id.tv_register);
 
         btn_visit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,10 +53,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        tv_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                layout.setVisibility(View.GONE);
+                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+                View mView = getLayoutInflater().inflate(R.layout.register_dialog_layout, null);
+
+                et_nama = (EditText) mView.findViewById(R.id.et_nama);
+                et_email = (EditText) mView.findViewById(R.id.et_email);
+                et_password = (EditText) mView.findViewById(R.id.et_password);
+
+                mBuilder.setView(mView);
+                final AlertDialog dialog = mBuilder.create();
+                dialog.show();
+
+            }
+        });
+
     }
 
     @Override
     public void onBackPressed() {
+
+        if (layout.getVisibility() == View.GONE) {
+            layout.setVisibility(View.VISIBLE);
+        } else
         if (layout.getVisibility() == View.VISIBLE) {
 
             layout.setVisibility(View.GONE);
@@ -53,4 +87,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    public void forceCrash(View view) {
+        throw new RuntimeException("This is a crash");
+    }
+
 }
