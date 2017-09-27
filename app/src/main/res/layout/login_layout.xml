@@ -15,14 +15,6 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Force Crash!"
-            android:onClick="forceCrash"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
-
 
         <ImageView
             android:id="@+id/iv_logo"
@@ -52,14 +44,14 @@
 
         <RelativeLayout
             android:id="@+id/rl_login"
-            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:background="@drawable/bg_shadow"
             android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <EditText
                 android:id="@+id/et_email"
@@ -90,34 +82,36 @@
 
             <mehdi.sakout.fancybuttons.FancyButton
                 android:id="@+id/btn_login"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
                 android:layout_below="@+id/et_password"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginTop="15dp"
-                android:padding="5dp"
-                fancy:fb_defaultColor="#42A5F5"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+                fancy:fb_defaultColor="#1E88E5"
                 fancy:fb_focusColor="#8cc9f8"
-                fancy:fb_fontIconSize="10sp"
+                fancy:fb_fontIconSize="25sp"
                 fancy:fb_iconPosition="left"
-                fancy:fb_radius="5dp"
-                fancy:fb_text="LOGIN"
+                fancy:fb_radius="2dp"
+                fancy:fb_text="MASUK"
                 fancy:fb_textColor="#fff">
 
-            </mehdi.sakout.fancybuttons.FancyButton>
+
+            </mehdi.sakout.fancybuttons.FancyButton>>
 
             <TextView
                 android:id="@+id/tv_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_login"
-                android:layout_marginTop="15dp"
                 android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="REGISTER"
                 android:textColor="#4CAF50"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                android:visibility="gone" />
 
 
         </RelativeLayout>
@@ -131,23 +125,22 @@
             android:visibility="visible">
 
 
-            <mehdi.sakout.fancybuttons.FancyButton
-                android:id="@+id/btn_visit"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:padding="10dp"
-                fancy:fb_defaultColor="#fff"
-                fancy:fb_focusColor="#8cc9f8"
-                fancy:fb_fontIconSize="25sp"
-                fancy:fb_iconPosition="left"
-                fancy:fb_radius="2dp"
-                fancy:fb_text="VISIT"
-                fancy:fb_textColor="#000">
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_visit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:padding="10dp"
+            fancy:fb_defaultColor="#fff"
+            fancy:fb_focusColor="#8cc9f8"
+            fancy:fb_fontIconSize="25sp"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="2dp"
+            fancy:fb_text="VISIT"
+            fancy:fb_textColor="#000">
 
 
-            </mehdi.sakout.fancybuttons.FancyButton>
-        </RelativeLayout>
-    </LinearLayout>
-</LinearLayout>
+        </mehdi.sakout.fancybuttons.FancyButton>
+    </RelativeLayout>
+</LinearLayout></LinearLayout>
