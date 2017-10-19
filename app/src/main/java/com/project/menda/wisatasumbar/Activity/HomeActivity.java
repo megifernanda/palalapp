@@ -26,7 +26,7 @@ public class HomeActivity extends AppCompatActivity  {
         LinearLayoutManager horizontalLayoutManagaer
                 = new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(horizontalLayoutManagaer);
-        adapter = new HomeAdapter(this);
+        adapter = new HomeAdapter(this, this);
         mRecyclerView.setAdapter(adapter);
 
         adapter.notifyDataSetChanged();

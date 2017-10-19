@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.crashlytics.android.Crashlytics;
+import com.google.android.gms.common.SignInButton;
 import com.project.menda.wisatasumbar.Activity.HomeActivity;
 
 import io.fabric.sdk.android.Fabric;
@@ -22,7 +23,7 @@ import mehdi.sakout.fancybuttons.FancyButton;
 public class MainActivity extends AppCompatActivity {
 
     private RelativeLayout layout;
-    private FancyButton btn_visit;
+    private SignInButton btn_visit;
     private FancyButton btn_login;
     private TextView tv_register;
     private EditText et_nama;
@@ -39,32 +40,39 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.login_layout);
 
         layout = (RelativeLayout) findViewById(R.id.rl_login);
-        btn_visit = (FancyButton) findViewById(R.id.btn_visit);
+        btn_visit = (SignInButton) findViewById(R.id.btn_visit);
         btn_login = (FancyButton) findViewById(R.id.btn_login);
 //        tv_register = (TextView) findViewById(R.id.tv_register);
 
         btn_visit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                slideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
-                slideDown = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
 
-                if (layout.getVisibility() != View.VISIBLE) {
-
-                    layout.startAnimation(slideUp);
-                    layout.setVisibility(View.VISIBLE);
-                    btn_visit.setVisibility(View.GONE);
-                }
             }
         });
+//
+//        btn_visit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                slideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_up);
+//                slideDown = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_down);
+//
+//                if (layout.getVisibility() != View.VISIBLE) {
+//
+//                    layout.startAnimation(slideUp);
+//                    layout.setVisibility(View.VISIBLE);
+//                    btn_visit.setVisibility(View.GONE);
+//                }
+//            }
+//        });
 
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        });
+//        btn_login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 //        tv_register.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -87,18 +95,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-
-        if (layout.getVisibility() == View.GONE) {
-            layout.setVisibility(View.VISIBLE);
-        } else if (layout.getVisibility() == View.VISIBLE) {
-
-            layout.setVisibility(View.GONE);
-            btn_visit.setVisibility(View.VISIBLE);
-        }
-
-    }
+//    @Override
+//    public void onBackPressed() {
+//
+//        if (layout.getVisibility() == View.GONE) {
+//            layout.setVisibility(View.VISIBLE);
+//        } else if (layout.getVisibility() == View.VISIBLE) {
+//
+//            layout.setVisibility(View.GONE);
+//            btn_visit.setVisibility(View.VISIBLE);
+//        }
+//
+//    }
 
 //    public void forceCrash(View view) {
 //        throw new RuntimeException("This is a crash");

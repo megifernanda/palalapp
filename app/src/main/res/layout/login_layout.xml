@@ -82,13 +82,13 @@
 
             <mehdi.sakout.fancybuttons.FancyButton
                 android:id="@+id/btn_login"
-                android:layout_below="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="20dp"
+                android:layout_below="@+id/et_password"
+                android:layout_marginBottom="20dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
                 android:padding="10dp"
                 fancy:fb_defaultColor="#1E88E5"
                 fancy:fb_focusColor="#8cc9f8"
@@ -116,31 +116,21 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/ly_2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:orientation="vertical"
             android:visibility="visible">
 
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btn_visit"
+                android:layout_width="270dp"
+                android:layout_height="70dp">
 
-        <mehdi.sakout.fancybuttons.FancyButton
-            android:id="@+id/btn_visit"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:padding="10dp"
-            fancy:fb_defaultColor="#fff"
-            fancy:fb_focusColor="#8cc9f8"
-            fancy:fb_fontIconSize="25sp"
-            fancy:fb_iconPosition="left"
-            fancy:fb_radius="2dp"
-            fancy:fb_text="VISIT"
-            fancy:fb_textColor="#000">
+            </com.google.android.gms.common.SignInButton>
 
-
-        </mehdi.sakout.fancybuttons.FancyButton>
-    </RelativeLayout>
-</LinearLayout></LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

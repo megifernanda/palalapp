@@ -30,7 +30,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:divider="#fff">
+        android:divider="#fff"
+        android:layoutAnimation="@anim/layout_animation_fall_down"
+        >
 
     </android.support.v7.widget.RecyclerView>
 
